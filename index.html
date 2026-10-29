@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qual è il nodo dell'offerta? – Mara Locatelli</title>
+<meta name="description" content="12 domande per capire se è la tua offerta a frenare le vendite e cosa sistemare per primo. Ci vogliono 5 minuti.">
+<meta property="og:title" content="Qual è il nodo dell'offerta?">
+<meta property="og:description" content="12 domande per capire se è la tua offerta a frenare le vendite e cosa sistemare per primo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --chocolate: #4C191B;
+    --ecru: #C6AA80;
+    --rust: #BA4225;
+    --alabaster: #E0E3DC;
+    --ebony: #61622D;
+    --paper: #FAF8F4;
+    --ink: #2B1E1C;
+    --serif: "Bodoni Moda", "Bodoni 72", Didot, serif;
+    --sans: "Jost", "Avenir Next", "Helvetica Neue", sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+  .kicker {
+    font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--ebony); font-weight: 500;
+  }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 400; color: var(--chocolate); margin: 0; }
+  h1 em, h2 em { color: var(--rust); }
+  p { margin: 0 0 16px; }
+
+  /* Copertina */
+  .hero { background: var(--alabaster); padding: 28px 0 56px; }
+  .hero .top {
+    display: flex; justify-content: space-between; align-items: baseline;
+    border-bottom: 1px solid var(--chocolate); padding-bottom: 12px;
+    color: var(--chocolate); font-size: 15px;
+  }
+  .hero h1 { font-size: clamp(48px, 13vw, 88px); line-height: 0.98; margin: 56px 0 24px; }
+  .hero .promise { font-size: 20px; line-height: 1.45; color: var(--chocolate); max-width: 34em; margin-bottom: 28px; }
+  .hero .row { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  .badge {
+    display: inline-block; border: 1px solid var(--chocolate);
+    padding: 9px 16px; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--chocolate);
+  }
+  .btn {
+    display: inline-block; text-decoration: none; cursor: pointer;
+    background: var(--rust); color: var(--paper); border: 0;
+    padding: 14px 22px; font: 500 15px var(--sans); letter-spacing: 0.06em;
+  }
+  .btn:hover { background: #a3391f; }
+  .btn.ghost { background: transparent; color: var(--chocolate); border: 1px solid var(--chocolate); }
+  .btn.ghost:hover { background: rgba(76,25,27,0.06); }
+  .hero .by { margin-top: 40px; font-size: 14px; color: var(--chocolate); }
+
+  section { padding: 56px 0; }
+  .intro h2 { font-size: clamp(32px, 8vw, 44px); line-height: 1.08; margin: 10px 0 24px; }
+  .lead { font-size: 19px; color: var(--chocolate); }
+  .howto { background: var(--alabaster); padding: 24px 24px 12px; margin: 28px 0; }
+  .howto h3 { font-family: var(--sans); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ebony); font-weight: 600; margin-bottom: 10px; }
+  .howto ol { margin: 0 0 12px; padding-left: 20px; }
+  .howto li { margin-bottom: 8px; }
+  .sign { font-family: var(--serif); font-style: italic; font-size: 28px; color: var(--chocolate); }
+
+  /* Domande */
+  .quiz { border-top: 1px solid var(--ecru); }
+  .quiz > .wrap > h2 { font-size: clamp(28px, 7vw, 38px); margin: 10px 0 8px; }
+  .progress { position: sticky; top: 0; z-index: 5; background: var(--paper); padding: 12px 0; border-bottom: 1px solid var(--alabaster); margin-bottom: 24px; }
+  .progress .bar { height: 4px; background: var(--alabaster); }
+  .progress .fill { height: 4px; width: 0; background: var(--rust); transition: width .25s; }
+  .progress .label { font-size: 13px; color: var(--chocolate); margin-top: 6px; }
+  .area { margin: 0 0 44px; }
+  .area-head { display: flex; align-items: baseline; gap: 12px; border-bottom: 1px solid var(--chocolate); padding-bottom: 8px; margin-bottom: 10px; }
+  .area-num { font-family: var(--serif); font-style: italic; font-size: 30px; color: var(--rust); line-height: 1; }
+  .area-title { font-family: var(--serif); font-size: 28px; color: var(--chocolate); line-height: 1; }
+  .area-why { font-size: 15px; color: var(--ebony); }
+  .q { padding: 16px 0; border-bottom: 1px solid var(--alabaster); }
+  .q legend { padding: 0; font-size: 17px; display: flex; gap: 12px; }
+  .q legend .n { color: var(--rust); font-weight: 600; min-width: 22px; }
+  .q small { display: block; color: var(--ebony); font-size: 13px; margin-top: 2px; }
+  fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+  .choices { display: flex; gap: 10px; margin: 12px 0 0 34px; }
+  .choices label { flex: 0 1 120px; }
+  .choices input { position: absolute; opacity: 0; pointer-events: none; }
+  .choices span {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    border: 1px solid var(--chocolate); padding: 10px 14px; cursor: pointer;
+    font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--chocolate);
+    transition: background .15s, color .15s;
+    user-select: none;
+  }
+  .choices span::before {
+    content: ""; width: 14px; height: 14px; border: 1px solid currentColor; flex: none;
+  }
+  .choices input:checked + span { background: var(--chocolate); color: var(--paper); }
+  .choices input:checked + span::before { background: var(--paper); box-shadow: inset 0 0 0 3px var(--chocolate); }
+  .choices input[value="no"]:checked + span { background: var(--rust); }
+  .choices input[value="no"]:checked + span::before { box-shadow: inset 0 0 0 3px var(--rust); }
+  .choices input:focus-visible + span { outline: 2px solid var(--rust); outline-offset: 2px; }
+  .tally { text-align: right; margin-top: 12px; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--chocolate); }
+  .tally b { font-family: var(--serif); font-size: 24px; letter-spacing: 0; color: var(--rust); margin-left: 6px; }
+
+  /* Risultato */
+  .results { background: var(--alabaster); }
+  .results h2 { font-size: clamp(32px, 8vw, 44px); margin: 10px 0 20px; }
+  .waiting { font-size: 18px; color: var(--chocolate); }
+  .verdict { background: var(--paper); padding: 24px; margin-bottom: 28px; border-left: 4px solid var(--rust); }
+  .verdict .case { font-family: var(--serif); font-size: 26px; color: var(--chocolate); line-height: 1.2; margin-bottom: 10px; }
+  .verdict .case em { color: var(--rust); }
+  .counts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 0 0 28px; }
+  .counts div { background: var(--paper); padding: 10px 8px; text-align: center; font-size: 13px; color: var(--chocolate); }
+  .counts div b { display: block; font-family: var(--serif); font-size: 26px; font-weight: 400; color: var(--rust); }
+  .counts div.hit { outline: 2px solid var(--rust); }
+  .cases { margin-bottom: 28px; }
+  .case-row { display: grid; grid-template-columns: 1fr; gap: 4px; padding: 14px 0; border-bottom: 1px solid var(--ecru); opacity: 0.55; }
+  .case-row.on { opacity: 1; }
+  .case-row b { font-family: var(--serif); font-weight: 400; font-size: 20px; color: var(--chocolate); }
+  .case-row p { margin: 0; font-size: 15px; }
+  .start-row { padding: 14px 0; border-bottom: 1px solid var(--ecru); }
+  .start-row b { font-family: var(--serif); font-weight: 400; font-size: 21px; color: var(--rust); display: block; }
+  .start-row p { margin: 4px 0 0; font-size: 15px; }
+  .start-row.hit { background: var(--paper); padding: 14px 16px; border-bottom-color: transparent; border-left: 4px solid var(--rust); }
+  .reset { margin-top: 24px; background: none; border: 0; color: var(--chocolate); text-decoration: underline; cursor: pointer; font: 14px var(--sans); padding: 0; }
+
+  /* Chiusura */
+  .closing { background: var(--chocolate); color: #F3EDE6; }
+  .closing .kicker { color: var(--ecru); }
+  .closing h2 { color: var(--paper); font-size: clamp(36px, 9vw, 52px); line-height: 1.05; margin: 10px 0 24px; }
+  .closing h2 em { color: var(--ecru); }
+  .closing .lead { color: #F3EDE6; }
+  .closing .box { border: 1px solid var(--ecru); padding: 22px 24px 10px; margin: 28px 0; }
+  .closing .box h3 { font-family: var(--sans); font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ecru); font-weight: 600; margin-bottom: 10px; }
+  .closing .box ul { margin: 0 0 12px; padding-left: 20px; }
+  .closing .box li { margin-bottom: 8px; }
+  .closing .btn { font-size: 16px; }
+  .closing .btn b { letter-spacing: 0.2em; }
+  .closing .sign { color: var(--paper); margin-top: 28px; }
+  footer { background: var(--chocolate); color: var(--ecru); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; padding: 20px 0 32px; border-top: 1px solid rgba(198,170,128,0.4); }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px; }
+  footer a { color: var(--ecru); }
+
+  @media (min-width: 640px) {
+    .case-row { grid-template-columns: 200px 1fr; gap: 20px; align-items: baseline; }
+    .start-row { display: grid; grid-template-columns: 140px 1fr; gap: 20px; align-items: baseline; }
+    .start-row p { margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="top"><span>Mara Locatelli</span><span class="kicker">Risorsa gratuita</span></div>
+    <h1>Qual è il nodo<br>dell'<em>Offerta?</em></h1>
+    <p class="promise">12 domande per capire se è la tua offerta a frenare le vendite e cosa sistemare per primo.</p>
+    <div class="row">
+      <a class="btn" href="#test">Inizia il test</a>
+      <span class="badge">Ci vogliono 5 minuti</span>
+    </div>
+    <p class="by">Mara Locatelli · Business e Marketing Strategist</p>
+  </div>
+</header>
+
+<section class="intro">
+  <div class="wrap">
+    <div class="kicker">Prima di iniziare</div>
+    <h2>«Bellissimo quello che fai.<br><em>Ci penso.»</em></h2>
+    <p class="lead">Le persone ti scrivono, ti fanno domande, ti dicono che il tuo lavoro è bellissimo. Poi arriva la proposta, e tutto si ferma.</p>
+    <p>Quando succede ogni tanto, può essere il momento, il budget, la persona. Quando succede spesso, conviene capire perché, e iniziare dalla tua offerta: cosa ottiene chi lavora con te, come funziona, cosa comprende, quanto costa e perché.</p>
+    <p>Se uno di questi pezzi non è chiaro, chi ti ascolta non ti dice di no. Ti dice "ci penso"... che spesso è lo stesso.</p>
+    <p>Questo test ti aiuta a capire se il nodo è proprio lì e in quale punto. Sono le stesse quattro aree da cui parto ogni volta che analizzo un'offerta con una cliente.</p>
+    <div class="howto">
+      <h3>Come usarlo</h3>
+      <ol>
+        <li>Scegli <b>un solo servizio</b>: quello che vendi di più, oppure quello che vorresti vendere di più.</li>
+        <li>Rispondi alle 12 domande pensando solo a quello.</li>
+        <li>Solo <b>sì</b> o <b>no</b>. Niente "non lo so": se hai un dubbio, segna no.</li>
+        <li>Alla fine trovi il tuo risultato, calcolato in automatico.</li>
+      </ol>
+    </div>
+    <p>Più sei onesta con te stessa più il test ti è utile. Buon lavoro!</p>
+  </div>
+</section>
+
+<section class="quiz" id="test">
+  <div class="wrap">
+    <div class="kicker">Le 12 domande</div>
+    <h2>Rispondi pensando a <em>un solo servizio</em></h2>
+
+    <div class="progress" aria-live="polite">
+      <div class="bar"><div class="fill" id="fill"></div></div>
+      <div class="label" id="progress-label">0 risposte su 12</div>
+    </div>
+
+    <form id="quiz">
+      <div class="area" data-area="risultato">
+        <div class="area-head"><span class="area-num">01</span><span class="area-title">Risultato</span></div>
+        <p class="area-why">Prima di sapere come funziona il tuo servizio, chi ti ascolta vuole capire cosa cambierà nella sua vita.</p>
+        <fieldset class="q"><legend><span class="n">1</span><span>Riesci a dire in una frase dove arriva una cliente alla fine del lavoro con te?</span></legend>
+          <div class="choices"><label><input type="radio" name="q1" value="si"><span>Sì</span></label><label><input type="radio" name="q1" value="no"><span>No</span></label></div></fieldset>
+        <fieldset class="q"><legend><span class="n">2</span><span>Quel risultato è concreto? Cioè la cliente si accorgerebbe da sola di averlo raggiunto?</span></legend>
+          <div class="choices"><label><input type="radio" name="q2" value="si"><span>Sì</span></label><label><input type="radio" name="q2" value="no"><span>No</span></label></div></fieldset>
+        <fieldset class="q"><legend><span class="n">3</span><span>È scritto con le parole che usano le tue clienti, e non con quelle del tuo settore (troppo tecniche)?</span></legend>
+          <div class="choices"><label><input type="radio" name="q3" value="si"><span>Sì</span></label><label><input type="radio" name="q3" value="no"><span>No</span></label></div></fieldset>
+        <div class="tally">Numero di no <b data-tally="risultato">0</b></div>
+      </div>
+
+      <div class="area" data-area="struttura">
+        <div class="area-head"><span class="area-num">02</span><span class="area-title">Struttura</span></div>
+        <p class="area-why">Fasi, durata e consegne chiare fanno capire alla persona cosa la aspetta e le permettono di scegliere.</p>
+        <fieldset class="q"><legend><span class="n">4</span><span>Se hai più servizi, una persona capisce subito la differenza tra l'uno e l'altro?</span></legend>
+          <div class="choices"><label><input type="radio" name="q4" value="si"><span>Sì</span></label><label><input type="radio" name="q4" value="no"><span>No</span></label></div></fieldset>
+        <fieldset class="q"><legend><span class="n">5</span><span>Il tuo servizio ha fasi, durata e consegne uguali per tutte, o lo ricostruisci a ogni richiesta?<small>Sì = uguali per tutte</small></span></legend>
+          <div class="choices"><label><input type="radio" name="q5" value="si"><span>Sì</span></label><label><input type="radio" name="q5" value="no"><span>No</span></label></div></fieldset>
+        <fieldset class="q"><legend><span class="n">6</span><span>Sai spiegare perché il lavoro è fatto in quell'ordine?</span></legend>
+          <div class="choices"><label><input type="radio" name="q6" value="si"><span>Sì</span></label><label><input type="radio" name="q6" value="no"><span>No</span></label></div></fieldset>
+        <div class="tally">Numero di no <b data-tally="struttura">0</b></div>
+      </div>
+
+      <div class="area" data-area="confini">
+        <div class="area-head"><span class="area-num">03</span><span class="area-title">Confini</span></div>
+        <p class="area-why">Quello che non è scritto si decide caso per caso e di solito, si dice di sì, ritrovandosi a fare più cose del previsto.</p>
+        <fieldset class="q"><legend><span class="n">7</span><span>Hai scritto cosa è incluso e cosa resta fuori?</span></legend>
+          <div class="choices"><label><input type="radio" name="q7" value="si"><span>Sì</span></label><label><input type="radio" name="q7" value="no"><span>No</span></label></div></fieldset>
+        <fieldset class="q"><legend><span class="n">8</span><span>Quando una cliente ti chiede qualcosa in più, sai già cosa rispondere?</span></legend>
+          <div class="choices"><label><input type="radio" name="q8" value="si"><span>Sì</span></label><label><input type="radio" name="q8" value="no"><span>No</span></label></div></fieldset>
+        <fieldset class="q"><legend><span class="n">9</span><span>È chiaro cosa deve fare la cliente, oltre a cosa fai tu?</span></legend>
+          <div class="choices"><label><input type="radio" name="q9" value="si"><span>Sì</span></label><label><input type="radio" name="q9" value="no"><span>No</span></label></div></fieldset>
+        <div class="tally">Numero di no <b data-tally="confini">0</b></div>
+      </div>
+
+      <div class="area" data-area="prezzo">
+        <div class="area-head"><span class="area-num">04</span><span class="area-title">Prezzo</span></div>
+        <p class="area-why">Un prezzo calcolato su criteri specifici ti aiuta a restare ferma sulla tua proposta e non fare sconti.</p>
+        <fieldset class="q"><legend><span class="n">10</span><span>Il prezzo è uguale per tutte le persone che comprano lo stesso servizio?</span></legend>
+          <div class="choices"><label><input type="radio" name="q10" value="si"><span>Sì</span></label><label><input type="radio" name="q10" value="no"><span>No</span></label></div></fieldset>
+        <fieldset class="q"><legend><span class="n">11</span><span>L'hai calcolato su costi, ore reali e obiettivi, e non guardando le colleghe?</span></legend>
+          <div class="choices"><label><input type="radio" name="q11" value="si"><span>Sì</span></label><label><input type="radio" name="q11" value="no"><span>No</span></label></div></fieldset>
+        <fieldset class="q"><legend><span class="n">12</span><span>Riesci a dirlo senza aggiungere spiegazioni?</span></legend>
+          <div class="choices"><label><input type="radio" name="q12" value="si"><span>Sì</span></label><label><input type="radio" name="q12" value="no"><span>No</span></label></div></fieldset>
+        <div class="tally">Numero di no <b data-tally="prezzo">0</b></div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="results" id="risultato">
+  <div class="wrap">
+    <div class="kicker">I risultati</div>
+    <h2>Dove si inceppa <em>la tua offerta</em></h2>
+
+    <p class="waiting" id="waiting">Rispondi a tutte e 12 le domande: il tuo risultato compare qui.</p>
+    <div class="verdict" id="verdict" hidden></div>
+
+    <div class="counts" id="counts">
+      <div data-count="risultato"><b>0</b>Risultato</div>
+      <div data-count="struttura"><b>0</b>Struttura</div>
+      <div data-count="confini"><b>0</b>Confini</div>
+      <div data-count="prezzo"><b>0</b>Prezzo</div>
+    </div>
+
+    <div class="cases">
+      <div class="case-row" data-case="regge"><b>Da 0 a 2 no in tutto</b><p>La tua offerta regge. Se le vendite non arrivano, il nodo è probabilmente altrove: posizionamento, visibilità, funnel di vendita, passaggio dalla conversazione alla proposta.</p></div>
+      <div class="case-row" data-case="nodo"><b>3 no nella stessa area</b><p>Lì c'è il tuo nodo. È il punto da cui partire, prima di cambiare contenuti, canali o strategia.</p></div>
+      <div class="case-row" data-case="sparsi"><b>No sparsi in tutte le aree</b><p>L'offerta va ripensata insieme ad altri pezzi del tuo marketing. In questo caso un lavoro su un solo punto non basta: serve guardare il quadro intero.</p></div>
+    </div>
+
+    <div class="kicker" style="margin-bottom:6px">Da dove partire, area per area</div>
+    <div class="start-row" data-start="risultato"><b>Risultato</b><p>Scrivi in una frase dove arriva la tua cliente, con le parole che usa lei quando ti racconta il suo problema. Poi prova a dirla a voce a una persona che non ti conosce.</p></div>
+    <div class="start-row" data-start="struttura"><b>Struttura</b><p>Per ogni servizio scrivi in che situazione si trova chi lo compra. Se due servizi rispondono alla stessa situazione, uniscili o cambiane uno.</p></div>
+    <div class="start-row" data-start="confini"><b>Confini</b><p>Scrivi tre cose: cosa è incluso, con i numeri (quante call, quanto durano); come e quando ti si scrive; cosa costa a parte.</p></div>
+    <div class="start-row" data-start="prezzo"><b>Prezzo</b><p>Conta le ore che quel servizio ti prende davvero, preparazione e messaggi compresi. Il prezzo parte da lì e da quanto ti serve fatturare ogni mese.</p></div>
+
+    <button class="reset" type="button" id="reset">Ricomincia il test</button>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="wrap">
+    <div class="kicker">E adesso?</div>
+    <h2>Hai trovato<br>il tuo <em>nodo</em>?</h2>
+    <p class="lead">Sapere dove si inceppa la tua offerta è già tanto. Sistemarla da sola, mentre lavori con le clienti, è più complicato.</p>
+    <p>Per questo ho creato la consulenza IL NODO: trenta giorni di lavoro insieme sulla tua offerta. Ridefiniamo risultato, struttura, confini e prezzo.</p>
+    <div class="box">
+      <h3>Come funziona</h3>
+      <ul>
+        <li>Compili un questionario approfondito per individuare le aree di lavoro</li>
+        <li>Svolgi esercizi mirati per la tua situazione e me li mandi in revisione</li>
+        <li>Ci vediamo in call per strutturare la tua Offerta</li>
+        <li>Ricevi un documento riassuntivo della tua offerta, con cosa include e cosa no, e una traccia per presentarla in call</li>
+        <li>Ci sentiamo via chat per un ultimo check sul documento per risolvere eventuali dubbi o domande</li>
+      </ul>
+    </div>
+    <p>Se dal test sono usciti no in tutte le aree, ma non riesci comunque a generare clienti e vendite scrivimi lo stesso: in quel caso ti dico onestamente qual è il lavoro più adatto alla tua situazione.</p>
+    <p style="margin-top:24px"><a class="btn" id="dm" href="https://www.instagram.com/" target="_blank" rel="noopener">Scrivimi <b>NODO</b> in chat su Instagram</a></p>
+    <p>Capiamo insieme se è il lavoro giusto per te.</p>
+    <p style="margin-top:20px"><a class="btn ghost" style="color:var(--paper);border-color:var(--ecru)" href="il-test-dell-offerta.pdf" download>Scarica la versione PDF da stampare</a></p>
+    <div class="sign">Mara</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><span>Mara Locatelli · Business e Marketing Strategist</span><span>Il nodo dell'offerta</span></div>
+</footer>
+
+<script>
+  // Nome utente Instagram di Mara (senza @): il bottone apre la chat con lei.
+  var INSTAGRAM = "";
+  if (INSTAGRAM) document.getElementById("dm").href = "https://ig.me/m/" + INSTAGRAM;
+
+  var AREE = {
+    risultato: { nome: "Risultato", domande: ["q1", "q2", "q3"] },
+    struttura: { nome: "Struttura", domande: ["q4", "q5", "q6"] },
+    confini: { nome: "Confini", domande: ["q7", "q8", "q9"] },
+    prezzo: { nome: "Prezzo", domande: ["q10", "q11", "q12"] }
+  };
+  var form = document.getElementById("quiz");
+  var KEY = "nodo-offerta-risposte";
+
+  function risposta(nome) {
+    var scelta = form.querySelector('input[name="' + nome + '"]:checked');
+    return scelta ? scelta.value : null;
+  }
+
+  function aggiorna() {
+    var date = 0, totNo = 0, conti = {};
+    Object.keys(AREE).forEach(function (k) {
+      conti[k] = 0;
+      AREE[k].domande.forEach(function (q) {
+        var r = risposta(q);
+        if (r) date++;
+        if (r === "no") { conti[k]++; totNo++; }
+      });
+      document.querySelector('[data-tally="' + k + '"]').textContent = conti[k];
+      document.querySelector('[data-count="' + k + '"] b').textContent = conti[k];
+    });
+
+    document.getElementById("fill").style.width = (date / 12 * 100) + "%";
+    document.getElementById("progress-label").textContent =
+      date === 12 ? "Fatto! Il tuo risultato è qui sotto." : date + " risposte su 12";
+
+    var verdict = document.getElementById("verdict");
+    var waiting = document.getElementById("waiting");
+    document.querySelectorAll(".case-row, .start-row, .counts div").forEach(function (el) {
+      el.classList.remove("on", "hit");
+    });
+    if (date < 12) { verdict.hidden = true; waiting.hidden = false; return; }
+    waiting.hidden = true; verdict.hidden = false;
+
+    var tutte = Object.keys(AREE).every(function (k) { return conti[k] > 0; });
+    var max = Math.max.apply(null, Object.keys(AREE).map(function (k) { return conti[k]; }));
+    var nodi = Object.keys(AREE).filter(function (k) { return conti[k] === max; });
+    var caso, testo;
+
+    if (totNo <= 2) {
+      caso = "regge";
+      testo = "<div class='case'>Hai " + totNo + (totNo === 1 ? " no" : " no") + " in tutto: <em>la tua offerta regge.</em></div>" +
+        "<p>Se le vendite non arrivano, il nodo è probabilmente altrove: posizionamento, visibilità, funnel di vendita, passaggio dalla conversazione alla proposta.</p>";
+    } else if (tutte) {
+      caso = "sparsi";
+      testo = "<div class='case'>Hai no <em>in tutte e quattro le aree.</em></div>" +
+        "<p>L'offerta va ripensata insieme ad altri pezzi del tuo marketing. In questo caso un lavoro su un solo punto non basta: serve guardare il quadro intero.</p>";
+    } else {
+      caso = "nodo";
+      var nomi = nodi.map(function (k) { return AREE[k].nome; });
+      testo = "<div class='case'>Il tuo nodo è " + (nomi.length > 1 ? "nelle aree " : "nell'area ") + "<em>" + nomi.join(" e ") + "</em>.</div>" +
+        "<p>Lì c'è il tuo nodo. È il punto da cui partire, prima di cambiare contenuti, canali o strategia. Trovi il primo passo qui sotto.</p>";
+      nodi.forEach(function (k) {
+        document.querySelector('[data-start="' + k + '"]').classList.add("hit");
+        document.querySelector('[data-count="' + k + '"]').classList.add("hit");
+      });
+    }
+    verdict.innerHTML = testo;
+    document.querySelector('[data-case="' + caso + '"]').classList.add("on");
+  }
+
+  form.addEventListener("change", function (e) {
+    aggiorna();
+    try {
+      var dati = {};
+      form.querySelectorAll("input:checked").forEach(function (i) { dati[i.name] = i.value; });
+      localStorage.setItem(KEY, JSON.stringify(dati));
+    } catch (err) {}
+    // Quando rispondi all'ultima domanda, porta al risultato.
+    if (form.querySelectorAll("input:checked").length === 12 && e.target.name === "q12") {
+      document.getElementById("risultato").scrollIntoView();
+    }
+  });
+
+  document.getElementById("reset").addEventListener("click", function () {
+    form.reset();
+    try { localStorage.removeItem(KEY); } catch (err) {}
+    aggiorna();
+    document.getElementById("test").scrollIntoView();
+  });
+
+  try {
+    var salvate = JSON.parse(localStorage.getItem(KEY) || "{}");
+    Object.keys(salvate).forEach(function (n) {
+      var i = form.querySelector('input[name="' + n + '"][value="' + salvate[n] + '"]');
+      if (i) i.checked = true;
+    });
+  } catch (err) {}
+  aggiorna();
+</script>
+</body>
+</html>
